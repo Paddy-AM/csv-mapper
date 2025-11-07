@@ -46,7 +46,7 @@ A robust web application for uploading CSV files and mapping their columns to a 
 - pip package manager
 
 ### Installation Steps
-
+Use Bash or Powershell to run below:
 1. **Install dependencies**
    ```bash
    pip install -r requirements.txt
