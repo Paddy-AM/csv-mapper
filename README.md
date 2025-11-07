@@ -192,7 +192,7 @@ Upload a CSV file for processing.
 ```
 
 #### `POST /api/validate`
-Validate a mapping configuration.
+Validate a mapping configuration and returns max error rows.
 
 **Request:**
 ```json
@@ -203,7 +203,8 @@ Validate a mapping configuration.
     "email": "email",
     "first_name": "fname",
     "last_name": "lname"
-  }
+  },
+  "max_error_rows": 5 //optional
 }
 ```
 
