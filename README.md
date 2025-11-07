@@ -1,4 +1,4 @@
-# AIBIDIA: CSV Ingestion and Mapping Tool
+# CSV Ingestion and Mapping Tool
 
 A robust web application for uploading CSV files and mapping their columns to a predefined schema. This tool provides intelligent mapping suggestions, comprehensive validation, and reusable mapping templates.
 
