@@ -1,0 +1,6 @@
+user_id,email,first_name,last_name,age,phone,country,status
+USR001,john.doe@example.com,John,Doe,30,+1-555-0123,US,active,2024-01-15
+USR002,jane.smith@example.com,Jane,Smith,25,+1-555-0124,US,active,2024-01-16
+USR003,bob.johnson@example.com,Bob,Johnson,35,+1-555-0125,CA,inactive,2024-01-17
+USR004,alice.williams@example.com,Alice,Williams,28,+44-20-1234-5678,UK,active,2024-01-18
+USR005,charlie.brown@example.com,Charlie,Brown,42,+1-555-0126,US,pending,2024-01-19

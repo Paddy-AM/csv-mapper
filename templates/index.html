@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Mapping Tool</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AIBIDIA: CSV Ingestion and Mapping Tool</h1>
+            <p>Upload CSV files and map them to a predefined schema</p>
+        </header>
+
+        <main>
+            <!-- Step 1: File Upload -->
+            <section id="upload-section" class="card">
+                <h2>Upload CSV File (Max:100 MB size)</h2>
+                <div class="upload-area">
+                    <input type="file" id="file-input" accept=".csv" />
+                    <button id="upload-btn" class="btn btn-primary">Upload File</button>
+                </div>
+                <div id="upload-status" class="status-message"></div>
+            </section>
+
+            <!-- Step 2: File Preview -->
+            <section id="preview-section" class="card" style="display: none;">
+                <h2>File Preview</h2>
+                <div id="file-info"></div>
+                <div id="preview-table"></div>
+            </section>
+
+            <!-- Step 3: Column Mapping -->
+            <section id="mapping-section" class="card" style="display: none;">
+                <h2>Map Columns to Schema</h2>
+                <p class="info-text">Map your CSV columns to the required schema fields. Required fields are marked with *</p>
+                
+                <div class="mapping-actions">
+                    <button id="load-mapping-btn" class="btn btn-secondary">Load Saved Mapping</button>
+                </div>
+
+                <div id="mapping-container"></div>
+
+                <div class="action-buttons">
+                    <button id="validate-btn" class="btn btn-primary">Validate Mapping</button>
+                    <button id="save-mapping-btn" class="btn btn-secondary">Save Mapping Template</button>
+                </div>
+
+                <div id="validation-results"></div>
+            </section>
+
+            <!-- Saved Mappings Modal -->
+            <div id="mappings-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Saved Mapping Templates</h2>
+                    <div id="mappings-list"></div>
+                </div>
+            </div>
+
+            <!-- Save Mapping Modal -->
+            <div id="save-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Save Mapping Template</h2>
+                    <form id="save-mapping-form">
+                        <div class="form-group">
+                            <label for="mapping-name">Name *</label>
+                            <input type="text" id="mapping-name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="mapping-description">Description</label>
+                            <textarea id="mapping-description" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>
